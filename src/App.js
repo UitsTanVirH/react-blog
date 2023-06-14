@@ -6,12 +6,14 @@ import blogs from "./data";
 
 const App = () => {
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<BlogList blogs={blogs} />} />
-        <Route path="/blogs/:id" element={<Blog blogs={blogs} />} />
-      </Routes>
-    </Router>
+    <div className="container">
+      <Router>
+        <Routes>
+          <Route path="/" element={<BlogList blogs={blogs} />} />
+          <Route path="/blogs/:id" element={<Blog blogs={blogs} />} />
+        </Routes>
+      </Router>
+    </div>
   );
 };
 
