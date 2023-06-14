@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 const BlogList = ({ blogs }) => {
   const [currentPage, setCurrentPage] = useState(1);
@@ -19,7 +20,9 @@ const BlogList = ({ blogs }) => {
     <div>
       {currentPosts.map((blog) => (
         <div key={blog.id}>
-          <h2>{blog.title}</h2>
+          <h2>
+            <Link to={`/blogs/${blog.id}`}>{blog.title}</Link>
+          </h2>
           <p>{blog.content}</p>
         </div>
       ))}
